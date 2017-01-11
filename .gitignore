@@ -53,3 +53,8 @@ TrainRightClients/TrainRightMVC/obj/*
 TrainRightClients/TrainRightMVC/Scripts/kendo/*
 TrainRightClients/TrainRightMVCommon/bin/*
 TrainRightClients/TrainRightMVCommon/obj/*
+TrainRightClients/.vs/*
+TrainRightApi/.vs/*
+TrainRightApi/packages/*
+TrainRightApi/TrainRightApi/bin/*
+TrainRightApi/TrainRightApi/obj/*
