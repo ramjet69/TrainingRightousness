@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+TrainRightClients/lib/KENDOUIMVC/*
+TrainRightClients/packages/*
+TrainRightClients/TrainRightMVC/bin/*
+TrainRightClients/TrainRightMVC/Content/kendo/*
+TrainRightClients/TrainRightMVC/obj/*
+TrainRightClients/TrainRightMVC/Scripts/kendo/*
+TrainRightClients/TrainRightMVCommon/bin/*
+TrainRightClients/TrainRightMVCommon/obj/*

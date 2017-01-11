@@ -1,0 +1,63 @@
+﻿@using TrainRightMVC.Areas.Admin.Models;
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@(Html.Kendo().Grid<SinCategories>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(e => e.Id).Title("Category Id");
+            columns.Bound(e => e.SinCategoryName).Title("Category Name");
+        })
+        
+        .Sortable()
+        .Pageable()
+        .Scrollable()
+        .ClientDetailTemplateId("template")
+        .HtmlAttributes(new { style = "height:900px;width:900px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(10)
+            .Read(read => read.Action("GetSinCategories", "SinCat"))
+        )
+        .Events(events => events.DataBound("dataBound"))
+)
+
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<SinSubCategories>()
+            .Name("grid_#=Id#") // template expression, to be evaluated in the master context
+            .Columns(columns =>
+            {
+                //columns.Command(command => command.Custom("ViewDetails").Click("showDetails"));
+
+                
+
+                columns.Command(command => { command.Edit(); command.Destroy(); });
+                columns.Bound(o => o.SinCategoryId); // escaped template expression, to be evaluated in the child/detail context
+                columns.Bound(o => o.SubCategoryName);
+                columns.Bound(o => o.Id).ClientTemplate(@Html.ActionLink("View Details", "SinSubCatDetails", "SinSubCat", new { ID = "\\#=Id\\#" }, null).ToHtmlString()).Title("Details");
+            })
+            .ToolBar(toolbar => toolbar.Create())
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Model(model => model.Id(p => p.SinCategoryId))
+                .PageSize(5)
+                .Read(read => read.Action("GetSinSubCategories", "SinCat", new { categoryid = "#=Id#" }))
+                .Create(update => update.Action("AddNewSubCategory", "SinCat"))
+                .Update(update => update.Action("AddNewSubCategory", "SinCat"))
+                .Destroy(update => update.Action("AddNewSubCategory", "SinCat"))
+            )
+            .Editable(editable => editable.Mode(GridEditMode.InLine))
+            .Pageable()
+            .Sortable()
+            .ToClientTemplate()
+    )
+</script>
+<script>
+    function dataBound() {
+        this.expandRow(this.tbody.find("tr.k-master-row").first());
+    }
+</script>

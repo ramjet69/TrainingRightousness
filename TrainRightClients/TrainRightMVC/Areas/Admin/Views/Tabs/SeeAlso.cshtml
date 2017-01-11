@@ -1,0 +1,15 @@
+﻿@using TrainRightMVC.Areas.Admin.Models;
+@model SeeAlso
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>See Also</h2>
+
+<label for="required">Selected</label>
+@(Html.Kendo().MultiSelect()
+    .Name("selected")
+    .Placeholder("Selected Categories...")
+    .BindTo(Model.AvailableCategories.Select(x => x.SubCategoryName).ToList())
+    .Value(Model.SelectedCategories.Select(c => c.SubCategoryName).ToArray())
+)

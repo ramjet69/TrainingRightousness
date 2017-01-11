@@ -1,0 +1,71 @@
+﻿using Kendo.Mvc.Extensions;
+using Kendo.Mvc.UI;
+using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using TrainRightMVC.Areas.Admin.Models;
+using TrainRightMVCommon.Helpers;
+
+namespace TrainRightMVC.Areas.Admin.Controllers
+{
+    public class SinCatController : Controller
+    {
+        private string baseuri = ConfigurationManager.AppSettings["BaseUrl"];
+        private string url = ConfigurationManager.AppSettings["SinCat"];
+        private string url2 = ConfigurationManager.AppSettings["SinSubCatByCatId"];
+        private HttpClient client;
+
+        public SinCatController()
+        {
+            this.client = new HttpClient();
+            this.client.BaseAddress = new Uri(this.baseuri);
+            this.client.DefaultRequestHeaders.Accept.Clear();
+            this.client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        }
+
+        public ActionResult Index()
+        {
+            return (ActionResult)this.View("SinCatSubCat");
+        }
+
+        public async Task<JsonResult> GetSinCategories([DataSourceRequest] DataSourceRequest request, bool? getsubs)
+        {
+            bool? nullable = getsubs;
+            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url + "?getsubs=" + (!nullable.HasValue || nullable.GetValueOrDefault()).ToString());
+            return !async.IsSuccessStatusCode ? this.Json((object)"[{Error}]") : this.Json((object)QueryableExtensions.ToDataSourceResult((IEnumerable)JsonConvert.DeserializeObject<List<SinCategories>>(async.Content.ReadAsStringAsync().Result), request));
+        }
+
+
+
+        public async Task<JsonResult> GetSinSubCategories([DataSourceRequest] DataSourceRequest request, int? categoryid)
+        {
+            int num = categoryid ?? -9999;
+            if (num == -9999)
+                return this.Json((object)"[{Error -9999 for categoryId}]");
+            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url2 + "?catid=" + (object)num);
+            return !async.IsSuccessStatusCode ? this.Json((object)"Error") : this.Json((object)QueryableExtensions.ToDataSourceResult((IEnumerable)JsonConvert.DeserializeObject<List<SinSubCategories>>(async.Content.ReadAsStringAsync().Result), request));
+        }
+
+
+
+        [HttpPost]
+        public async Task<JsonpResult> AddNewSubCategory([DataSourceRequest] DataSourceRequest request, [Bind(Prefix = "models")] IEnumerable<SinSubCategories> sincats)
+        {
+            if (this.ModelState.IsValid)
+            {
+                this.client.BaseAddress = new Uri(this.baseuri + this.url2);
+                if ((await HttpClientExtensions.PostAsJsonAsync<IEnumerable<SinSubCategories>>(this.client, this.baseuri + this.url2, sincats)).IsSuccessStatusCode)
+                    return ControllerExtensions.Jsonp((Controller)this, (object)sincats, "callback");
+            }
+            return ControllerExtensions.Jsonp((Controller)this, (object)"[{Error Updating}]", "callback");
+        }
+
+
+    }
+}

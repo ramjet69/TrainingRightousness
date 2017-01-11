@@ -1,0 +1,34 @@
+﻿@model TrainRightMVC.Areas.Admin.Models.InfoCommands
+
+<div class="product-view">
+    <dl>
+        <dt>Bible Book</dt>
+        <dd>
+            @(Html.EditorFor(p => p.BibleBook))
+        </dd>
+        <dt>Book Abbr.</dt>
+        <dd>
+            @(Html.EditorFor(p => p.BibleBookAbbr))
+        </dd>
+        <dt>Verse Number</dt>
+        <dd>
+            @(Html.EditorFor(p => p.VerseNumber))
+        </dd>
+        <dt>Verse</dt>
+        <dd>
+            @(Html.TextAreaFor(p => p.Verse, new { style = "width: 75%" }))
+        </dd>
+        <dt>Verse Information</dt>
+        <dd>
+            @(Html.TextAreaFor(p => p.VerseInformation, new {style = "width: 75%" }))
+        </dd>
+        <dt>Verse Command</dt>
+        <dd>
+            @(Html.TextAreaFor(p => p.VerseCommand, new { style = "width: 75%" }))
+        </dd>
+    </dl>
+    <div class="edit-buttons">
+        <a class="k-button k-update-button" href="\\#"><span class="k-icon k-update"></span></a>
+        <a class="k-button k-cancel-button" href="\\#"><span class="k-icon k-cancel"></span></a>
+    </div>
+</div>

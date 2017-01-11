@@ -1,0 +1,34 @@
+﻿@model TrainRightMVC.Areas.Admin.Models.InfoCommands
+
+<div class="product-view">
+    <dl>
+        <dt>Bible Book</dt>
+        <dd>
+            @(Html.EditorFor(p => p.BibleBook))
+        </dd>
+        <dt>Book Abbr.</dt>
+        <dd>
+            @(Html.EditorFor(p => p.BibleBookAbbr))
+        </dd>
+        <dt>Verse Number</dt>
+        <dd>
+            @(Html.EditorFor(p => p.VerseNumber))
+        </dd>
+        <dt>Verse</dt>
+        <dd>
+            @(Html.EditorFor(p => p.Verse))
+        </dd>
+        <dt>Verse Information</dt>
+        <dd>
+            @(Html.EditorFor(p => p.VerseInformation))
+        </dd>
+        <dt>Verse Command</dt>
+        <dd>
+            @(Html.EditorFor(p => p.VerseCommand))
+        </dd>
+    </dl>
+    <div class="edit-buttons">
+        <a class="k-button k-edit-button" href="\\#"><span class="k-icon k-edit"></span></a>
+        <a class="k-button k-cancel-button" href="\\#"><span class="k-icon k-cancel"></span></a>
+    </div>
+</div>
