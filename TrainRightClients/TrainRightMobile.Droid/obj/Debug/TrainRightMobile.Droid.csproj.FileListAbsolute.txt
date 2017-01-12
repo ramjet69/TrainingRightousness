@@ -1,0 +1,16 @@
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.dll
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.TrainRightMobile.Droid.apk
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.TrainRightMobile.Droid-Signed.apk
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\TrainRightMobile.Droid.dll
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\TrainRightMobile.Droid.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\bin\TrainRightMobile.Droid.TrainRightMobile.Droid.apk
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\mainmenu.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\values\strings.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\trainrightlogo.jpg
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\R.cs.flag
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\uploadflags.txt
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\smallicon.jpg
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\TrainRightMobile.Droid.csprojResolveAssemblyReference.cache
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\TrainRightMobile.Droid.dll.mdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.dll.mdb

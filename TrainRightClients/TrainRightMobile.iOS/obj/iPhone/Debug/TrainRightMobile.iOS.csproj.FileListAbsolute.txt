@@ -1,0 +1,11 @@
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\bin\iPhone\Debug\TrainRightMobile.iOS.exe
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\bin\iPhone\Debug\TrainRightMobile.iOS.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\optimized\
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\TrainRightMobile.iOS.csprojResolveAssemblyReference.cache
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\TrainRightMobile.iOS.exe
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\TrainRightMobile.iOS.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\obj\iPhone\Debug\TrainRightMobile.iOS.exe.mdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.iOS\bin\iPhone\Debug\TrainRightMobile.iOS.exe.mdb

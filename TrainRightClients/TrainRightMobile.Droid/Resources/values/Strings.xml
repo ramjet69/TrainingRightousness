@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Training in Righteousness</string>
+  <string name="giveInstructionButtonText">Give Instruction</string>
+  <string name="reviewTrainingButtonText">View your cart</string>
+  <string name="settingsButtonText">Take a picture with Ray</string>
+</resources>
