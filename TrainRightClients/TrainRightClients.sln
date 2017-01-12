@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRightMVC", "TrainRight
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRightMVCommon", "TrainRightMVCommon\TrainRightMVCommon.csproj", "{CA932BD4-4489-4E3C-BCAB-89D886383317}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainRightMobile.Core", "TrainRightMobile.Core\TrainRightMobile.Core.csproj", "{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA932BD4-4489-4E3C-BCAB-89D886383317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA932BD4-4489-4E3C-BCAB-89D886383317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA932BD4-4489-4E3C-BCAB-89D886383317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
