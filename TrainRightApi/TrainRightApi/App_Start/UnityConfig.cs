@@ -1,5 +1,6 @@
 using Microsoft.Practices.Unity;
 using System.Web.Http;
+using TrainRightApi.Repository;
 using Unity.WebApi;
 
 namespace TrainRightApi
@@ -10,10 +11,7 @@ namespace TrainRightApi
         {
 			var container = new UnityContainer();
             
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
+            container.RegisterType<ITrainRightRepository, TrainRightRepository>();
             
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
