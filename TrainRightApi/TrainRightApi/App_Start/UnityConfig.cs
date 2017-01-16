@@ -1,5 +1,6 @@
 using Microsoft.Practices.Unity;
 using System.Web.Http;
+using TrainRightApi.DataContext;
 using TrainRightApi.Repository;
 using Unity.WebApi;
 
@@ -12,7 +13,7 @@ namespace TrainRightApi
 			var container = new UnityContainer();
             
             container.RegisterType<ITrainRightRepository, TrainRightRepository>();
-            
+
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

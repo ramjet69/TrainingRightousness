@@ -24,13 +24,12 @@ namespace TrainRightApi.DataContext
         public DbSet<Repentance> Repentance { get; set; }
 
 
-
-        public TrainRightContext() : base("TrainRightContext")
+        public TrainRightContext() : base("TrainRightConx")
         {
 
         }
 
-        protected virtual void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }

@@ -14,16 +14,17 @@ namespace TrainRightApi.Repository
 
         public TrainRightRepository(TrainRightContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
         public IEnumerable<SinCategory> GetAllSinCategories(bool includesubs)
         {
             try
             {
-                if (!includesubs)
-                    return ((IEnumerable<SinCategory>)_context.SinCategory).ToList();
-                return ((IEnumerable<SinCategory>)QueryableExtensions.Include(_context.SinCategory, (i => i.SinSubCategory))).ToList();
+                //if (!includesubs)
+                return _context.SinCategory.ToList();
+                //return ((IEnumerable<SinCategory>)_context.SinCategory).ToList();
+                //return ((IEnumerable<SinCategory>)QueryableExtensions.Include(_context.SinCategory, (i => i.SinSubCategory))).ToList();
             }
             catch (Exception ex)
             {
@@ -35,9 +36,10 @@ namespace TrainRightApi.Repository
         {
             try
             {
-                if (includesubs)
-                    QueryableExtensions.Include(_context.SinCategory, (i => i.SinSubCategory)).First((Expression<Func<SinCategory, bool>>)(sc => sc.Id == id));
-                return ((IQueryable<SinCategory>)this._context.SinCategory).First<SinCategory>((Expression<Func<SinCategory, bool>>)(sc => sc.Id == id));
+                //if (includesubs)
+                    return _context.SinCategory.First(sc => sc.Id==id);
+                
+
             }
             catch (Exception ex)
             {
