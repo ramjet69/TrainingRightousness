@@ -17,14 +17,12 @@ namespace TrainRightApi.Repository
             _context = context;
         }
 
-        public IEnumerable<SinCategory> GetAllSinCategories(bool includesubs)
+        public IEnumerable<SinCategory> GetAllSinCategories()
         {
             try
             {
-                //if (!includesubs)
+                //SinSubCats included because model defines relationship??
                 return _context.SinCategory.ToList();
-                //return ((IEnumerable<SinCategory>)_context.SinCategory).ToList();
-                //return ((IEnumerable<SinCategory>)QueryableExtensions.Include(_context.SinCategory, (i => i.SinSubCategory))).ToList();
             }
             catch (Exception ex)
             {
@@ -32,14 +30,11 @@ namespace TrainRightApi.Repository
             }
         }
 
-        public SinCategory GetSinCategorybyId(int id, bool includesubs)
+        public SinCategory GetSinCategorybyId(int id)
         {
             try
             {
-                //if (includesubs)
-                    return _context.SinCategory.First(sc => sc.Id==id);
-                
-
+                return _context.SinCategory.First(sc => sc.Id==id);
             }
             catch (Exception ex)
             {
@@ -47,11 +42,11 @@ namespace TrainRightApi.Repository
             }
         }
 
-        public IEnumerable<SinSubCategory> GetSinSubCategorisbyCatId(int catid)
+        public SinSubCategory GetSinSubCategoriesbyId(int catid)
         {
             try
             {
-                return (IEnumerable<SinSubCategory>)((IQueryable<SinSubCategory>)this._context.SinSubCategory).Where<SinSubCategory>((Expression<Func<SinSubCategory, bool>>)(q => q.SinCategoryId == catid));
+                return _context.SinSubCategory.First(q => q.Id == catid);
             }
             catch (Exception ex)
             {
@@ -63,19 +58,7 @@ namespace TrainRightApi.Repository
         {
             try
             {
-                return (IEnumerable<SinSubCategory>)((IEnumerable<SinSubCategory>)this._context.SinSubCategory).ToList<SinSubCategory>();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-
-        public SinSubCategory GetSinSubCategoriesbyId(int id)
-        {
-            try
-            {
-                return ((IQueryable<SinSubCategory>)this._context.SinSubCategory).First<SinSubCategory>((Expression<Func<SinSubCategory, bool>>)(sc => sc.Id == id));
+                return _context.SinSubCategory.ToList();
             }
             catch (Exception ex)
             {
@@ -87,7 +70,7 @@ namespace TrainRightApi.Repository
         {
             try
             {
-                return ((IQueryable<SinSectionHeader>)this._context.SinSectionHeader).First<SinSectionHeader>((Expression<Func<SinSectionHeader, bool>>)(sc => sc.SubCatId == sinsubid));
+                return _context.SinSectionHeader.First(sc => sc.SubCatId == sinsubid);
             }
             catch (Exception ex)
             {
@@ -99,7 +82,7 @@ namespace TrainRightApi.Repository
         {
             try
             {
-                return (IEnumerable<SinSection>)this._context.SinSection;
+                return _context.SinSection;
             }
             catch (Exception ex)
             {
@@ -111,8 +94,8 @@ namespace TrainRightApi.Repository
         {
             try
             {
-                int subid = this.ReturnSubCatId(subcat);
-                return (IEnumerable<SinSubCatCrossRef>)((IQueryable<SinSubCatCrossRef>)this._context.SinSubCatCrossRef).Where<SinSubCatCrossRef>((Expression<Func<SinSubCatCrossRef, bool>>)(s => s.SubCatId == subid));
+                int subid = ReturnSubCatId(subcat);
+                return _context.SinSubCatCrossRef.Where(s => s.SubCatId == subid);
             }
             catch (Exception ex)
             {
@@ -123,49 +106,49 @@ namespace TrainRightApi.Repository
         public IEnumerable<InfoCommands> GetInfoCommands(string subcat)
         {
             int subid = this.ReturnSubCatId(subcat);
-            return (IEnumerable<InfoCommands>)((IQueryable<InfoCommands>)this._context.InfoCommands).Where<InfoCommands>((Expression<Func<InfoCommands, bool>>)(i => i.SubCatId == subid));
+            return _context.InfoCommands.Where(i => i.SubCatId == subid);
         }
 
         public IEnumerable<InfoCommands> GetInfoCommands(int subcatid)
         {
-            return (IEnumerable<InfoCommands>)((IQueryable<InfoCommands>)this._context.InfoCommands).Where<InfoCommands>((Expression<Func<InfoCommands, bool>>)(i => i.SubCatId == subcatid));
+            return _context.InfoCommands.Where(i => i.SubCatId == subcatid);
         }
 
         public IEnumerable<WhatHappens> GetWhatHappens(string subcat)
         {
-            int subid = this.ReturnSubCatId(subcat);
-            return (IEnumerable<WhatHappens>)((IQueryable<WhatHappens>)this._context.WhatHappens).Where<WhatHappens>((Expression<Func<WhatHappens, bool>>)(i => i.SubCatId == subid));
+            int subid = ReturnSubCatId(subcat);
+            return _context.WhatHappens.Where(i => i.SubCatId == subid);
         }
 
         public IEnumerable<Repentance> GetRepentance(string subcat)
         {
-            int subid = this.ReturnSubCatId(subcat);
-            return (IEnumerable<Repentance>)((IQueryable<Repentance>)this._context.Repentance).Where<Repentance>((Expression<Func<Repentance, bool>>)(i => i.SubCatId == subid));
+            int subid = ReturnSubCatId(subcat);
+            return _context.Repentance.Where(i => i.SubCatId == subid);
         }
 
         public IEnumerable<InfoCommands> UpdateInfoCommands(InfoCommands command)
         {
-            InfoCommands infoCommands = ((IQueryable<InfoCommands>)this._context.InfoCommands).Where<InfoCommands>((Expression<Func<InfoCommands, bool>>)(i => i.SubCatId == command.SubCatId)).FirstOrDefault<InfoCommands>();
+            InfoCommands infoCommands = _context.InfoCommands.Where(i => i.SubCatId == command.SubCatId).FirstOrDefault();
             infoCommands.Id = command.Id;
             infoCommands.SubCatId = command.SubCatId;
             infoCommands.Verse = command.Verse;
             infoCommands.VerseCommand = command.VerseCommand;
             infoCommands.VerseInformation = command.VerseCommand;
             infoCommands.VerseNumber = command.VerseNumber;
-            this._context.SaveChanges();
-            return this.GetInfoCommands(infoCommands.SubCatId);
+            _context.SaveChanges();
+            return GetInfoCommands(infoCommands.SubCatId);
         }
 
         public IEnumerable<InfoCommands> CreateInfoCommands(InfoCommands command)
         {
-            InfoCommands infoCommands = this._context.InfoCommands.Add(command);
-            this._context.SaveChanges();
-            return this.GetInfoCommands(infoCommands.SubCatId);
+            InfoCommands infoCommands = _context.InfoCommands.Add(command);
+            _context.SaveChanges();
+            return GetInfoCommands(infoCommands.SubCatId);
         }
 
         private int ReturnSubCatId(string subcat)
         {
-            return ((IQueryable<SinSubCategory>)this._context.SinSubCategory).First<SinSubCategory>((Expression<Func<SinSubCategory, bool>>)(a => a.SubCategoryName == subcat)).Id;
+            return _context.SinSubCategory.First(a => a.SubCategoryName == subcat).Id;
         }
 
         public bool SaveAll()

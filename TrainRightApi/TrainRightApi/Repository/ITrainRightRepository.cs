@@ -6,11 +6,9 @@ namespace TrainRightApi.Repository
     public interface ITrainRightRepository
     {
 
-        IEnumerable<SinCategory> GetAllSinCategories(bool includesubs = true);
+        IEnumerable<SinCategory> GetAllSinCategories();
 
-        SinCategory GetSinCategorybyId(int id, bool includesubs = true);
-
-        IEnumerable<SinSubCategory> GetSinSubCategorisbyCatId(int catid);
+        SinCategory GetSinCategorybyId(int id);
 
         IEnumerable<SinSubCategory> GetAllSubCategories();
 

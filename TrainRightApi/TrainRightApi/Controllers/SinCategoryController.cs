@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
 using TrainRightApi.Models;
 using TrainRightApi.Repository;
 
@@ -12,29 +11,21 @@ namespace TrainRightApi.Controllers
 
         public SinCategoryController(ITrainRightRepository repository)
         {
-            this._repository = repository;
+            _repository = repository;
         }
 
         [HttpGet]
         [Route("")]
-        public IHttpActionResult Get([FromUri] bool? getsubs)
+        public IHttpActionResult Get()
         {
-            bool? nullable = getsubs;
-            return Ok(_repository.GetAllSinCategories(!nullable.HasValue || nullable.GetValueOrDefault()));
+            return Ok(_repository.GetAllSinCategories());
         }
 
         [HttpGet]
         [Route("")]
         public IHttpActionResult Get([FromUri] int id)
         {
-            return Ok(_repository.GetSinCategorybyId(id, true));
-        }
-
-        [HttpGet]
-        [Route("SinSubCatByCatId")]
-        public IHttpActionResult GetSubCategoriesByCatId([FromUri] int catid)
-        {
-            return Ok(_repository.GetSinSubCategorisbyCatId(catid));
+            return Ok(_repository.GetSinCategorybyId(id));
         }
 
         public IHttpActionResult Post([FromBody] SinCategory mdl)
