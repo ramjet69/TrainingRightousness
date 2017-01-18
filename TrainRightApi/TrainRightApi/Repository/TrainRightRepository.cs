@@ -42,11 +42,11 @@ namespace TrainRightApi.Repository
             }
         }
 
-        public SinSubCategory GetSinSubCategoriesbyId(int catid)
+        public IEnumerable<SinSubCategory> GetSinSubCategoriesbyId(int catid)
         {
             try
             {
-                return _context.SinSubCategory.First(q => q.Id == catid);
+                return _context.SinSubCategory.Where(q => q.SinCategoryId == catid);
             }
             catch (Exception ex)
             {

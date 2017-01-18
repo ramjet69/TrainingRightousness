@@ -30,11 +30,10 @@ namespace TrainRightApi.Controllers
         }
 
         [HttpGet]
-        [Route("")]
-        [Route("SinDetails")]
-        public IHttpActionResult GetSinDetails([FromUri] int sindetailsid)
+        [Route("SinDetails/{id}")]
+        public IHttpActionResult GetSinDetails([FromUri] int id)
         {
-            return Ok(_repository.GetSinSectionHeader(sindetailsid));
+            return Ok(_repository.GetSinSectionHeader(id));
         }
 
         [HttpGet]

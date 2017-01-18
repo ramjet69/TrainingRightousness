@@ -12,7 +12,7 @@ namespace TrainRightApi.Repository
 
         IEnumerable<SinSubCategory> GetAllSubCategories();
 
-        SinSubCategory GetSinSubCategoriesbyId(int id);
+        IEnumerable<SinSubCategory> GetSinSubCategoriesbyId(int id);
 
         SinSectionHeader GetSinSectionHeader(int sinsubid);
 

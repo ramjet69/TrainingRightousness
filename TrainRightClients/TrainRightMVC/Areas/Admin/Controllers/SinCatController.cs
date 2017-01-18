@@ -31,14 +31,14 @@ namespace TrainRightMVC.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            return (ActionResult)this.View("SinCatSubCat");
+            return View("SinCatSubCat");
         }
 
         public async Task<JsonResult> GetSinCategories([DataSourceRequest] DataSourceRequest request, bool? getsubs)
         {
             bool? nullable = getsubs;
-            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url + "?getsubs=" + (!nullable.HasValue || nullable.GetValueOrDefault()).ToString());
-            return !async.IsSuccessStatusCode ? this.Json((object)"[{Error}]") : this.Json((object)QueryableExtensions.ToDataSourceResult((IEnumerable)JsonConvert.DeserializeObject<List<SinCategories>>(async.Content.ReadAsStringAsync().Result), request));
+            HttpResponseMessage async = await client.GetAsync(baseuri + url + "?getsubs=" + (!nullable.HasValue || nullable.GetValueOrDefault()).ToString());
+            return !async.IsSuccessStatusCode ? Json("[{Error}]") : Json(QueryableExtensions.ToDataSourceResult(JsonConvert.DeserializeObject<List<SinCategories>>(async.Content.ReadAsStringAsync().Result), request));
         }
 
 
@@ -47,9 +47,9 @@ namespace TrainRightMVC.Areas.Admin.Controllers
         {
             int num = categoryid ?? -9999;
             if (num == -9999)
-                return this.Json((object)"[{Error -9999 for categoryId}]");
-            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url2 + "?catid=" + (object)num);
-            return !async.IsSuccessStatusCode ? this.Json((object)"Error") : this.Json((object)QueryableExtensions.ToDataSourceResult((IEnumerable)JsonConvert.DeserializeObject<List<SinSubCategories>>(async.Content.ReadAsStringAsync().Result), request));
+                return Json("[{Error -9999 for categoryId}]");
+            HttpResponseMessage async = await client.GetAsync(baseuri + url2 + "?id=" + num);
+            return !async.IsSuccessStatusCode ? Json("Error") : Json(QueryableExtensions.ToDataSourceResult(JsonConvert.DeserializeObject<List<SinSubCategories>>(async.Content.ReadAsStringAsync().Result), request));
         }
 
 
@@ -57,13 +57,13 @@ namespace TrainRightMVC.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonpResult> AddNewSubCategory([DataSourceRequest] DataSourceRequest request, [Bind(Prefix = "models")] IEnumerable<SinSubCategories> sincats)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                this.client.BaseAddress = new Uri(this.baseuri + this.url2);
-                if ((await HttpClientExtensions.PostAsJsonAsync<IEnumerable<SinSubCategories>>(this.client, this.baseuri + this.url2, sincats)).IsSuccessStatusCode)
-                    return ControllerExtensions.Jsonp((Controller)this, (object)sincats, "callback");
+                client.BaseAddress = new Uri(baseuri + url2);
+                if ((await HttpClientExtensions.PostAsJsonAsync(client, baseuri + url2, sincats)).IsSuccessStatusCode)
+                    return ControllerExtensions.Jsonp(this, sincats, "callback");
             }
-            return ControllerExtensions.Jsonp((Controller)this, (object)"[{Error Updating}]", "callback");
+            return ControllerExtensions.Jsonp(this, "[{Error Updating}]", "callback");
         }
 
 

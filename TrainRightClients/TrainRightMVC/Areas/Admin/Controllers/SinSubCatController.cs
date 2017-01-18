@@ -26,11 +26,13 @@ namespace TrainRightMVC.Areas.Admin.Controllers
             this.client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        [Route("SinSubCatDetails/{sinsubcatid?}")]
-        public async Task<ActionResult> SinSubCatDetails(int? sinsubcatid)
+        [Route("SinSubCatDetails/{id?}")]
+        public async Task<ActionResult> SinSubCatDetails(int? id)
         {
-            HttpResponseMessage responseMessage = await this.client.GetAsync(this.baseuri + this.url + "?sindetailsid=" + (object)sinsubcatid);
-            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url2);
+            HttpResponseMessage responseMessage = await client.GetAsync(baseuri + url + id);
+
+            HttpResponseMessage async = await client.GetAsync(baseuri + url2);
+
             if (!responseMessage.IsSuccessStatusCode)
                 return (ActionResult)null;
             SinSectionHeader sinSectionHeader = (SinSectionHeader)JsonConvert.DeserializeObject<SinSectionHeader>(responseMessage.Content.ReadAsStringAsync().Result);
