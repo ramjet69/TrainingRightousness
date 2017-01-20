@@ -36,31 +36,35 @@ namespace TrainRightMVC.Areas.Admin.Controllers
         [Route("SeeAlso/{subcat}")]
         public async Task<ActionResult> SeeAlso(string subcat)
         {
-            HttpResponseMessage responseMessage = await this.client.GetAsync(this.baseuri + this.url + "SeeAlso/" + subcat);
-            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url3);
+            HttpResponseMessage responseMessage = await client.GetAsync(baseuri + url + "SeeAlso/" + subcat);
+            HttpResponseMessage async = await client.GetAsync(baseuri + url3 + "?subcat=" + subcat);
             SeeAlso seeAlso = new SeeAlso();
             if (async.IsSuccessStatusCode)
             {
                 string result = async.Content.ReadAsStringAsync().Result;
-                seeAlso.AvailableCategories = (List<SinSubCategories>)JsonConvert.DeserializeObject<List<SinSubCategories>>(result);
+                seeAlso.AvailableCategories = JsonConvert.DeserializeObject<List<SinSubCategories>>(result);
             }
+
             if (responseMessage.IsSuccessStatusCode)
             {
                 var m0 = JsonConvert.DeserializeObject<List<SinSubCatCrossRef>>(responseMessage.Content.ReadAsStringAsync().Result);
-                List<SinSubCategories> sinSubCategoriesList = new List<SinSubCategories>();
-                foreach (SinSubCatCrossRef sinSubCatCrossRef in (List<SinSubCatCrossRef>)m0)
+                List<string> sinSubCategoriesList = new List<string>();
+                foreach (SinSubCatCrossRef sinSubCatCrossRef in m0)
                 {
                     SinSubCatCrossRef item = sinSubCatCrossRef;
-                    IEnumerable<SinSubCategories> source = seeAlso.AvailableCategories.Where<SinSubCategories>((Func<SinSubCategories, bool>)(c => c.Id == item.CrossSubCatId));
-                    sinSubCategoriesList.Add(new SinSubCategories()
-                    {
-                        SubCategoryName = source.First<SinSubCategories>().SubCategoryName,
-                        Id = source.First<SinSubCategories>().Id
-                    });
+
+                    IEnumerable<SinSubCategories> source = seeAlso.AvailableCategories.Where(c => c.Id == item.CrossSubCatId);
+                    sinSubCategoriesList.Add(source.First().SubCategoryName);
                 }
-                seeAlso.AvailableCategories = sinSubCategoriesList;
+
+
+                seeAlso.SelectedCategories = sinSubCategoriesList;
+                seeAlso.SinCat = subcat;
+                 
             }
-            return (ActionResult)this.View("~/Areas/Admin/Views/Tabs/SeeAlso.cshtml", (object)seeAlso);
+
+            return View("~/Areas/Admin/Views/Tabs/SeeAlso.cshtml", seeAlso);
+
         }
 
         [Route("InfoCommand/{subcat}")]

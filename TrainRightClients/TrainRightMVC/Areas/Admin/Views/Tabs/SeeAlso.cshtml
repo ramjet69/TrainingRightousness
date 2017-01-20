@@ -6,10 +6,20 @@
 
 <h2>See Also</h2>
 
-<label for="required">Selected</label>
-@(Html.Kendo().MultiSelect()
-    .Name("selected")
-    .Placeholder("Selected Categories...")
-    .BindTo(Model.AvailableCategories.Select(x => x.SubCategoryName).ToList())
-    .Value(Model.SelectedCategories.Select(c => c.SubCategoryName).ToArray())
-)
+<div>
+    
+@using (Html.BeginForm("UpdateSeeAlso", "SeeAlso", new { id=Model.SinCat}))
+{
+    <label for="required">Selected</label>
+    @(Html.Kendo().MultiSelectFor(m => m.SelectedCategories)
+        .Placeholder("Selected Categories...")
+        .BindTo(Model.AvailableCategories.Select(x => x.SubCategoryName).ToList())
+        .Value(Model.SelectedCategories)
+
+    )
+    <br />
+    <br />
+    <button class="k-button" id="get" type="submit">Update</button>
+}
+</div>
+

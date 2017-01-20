@@ -54,6 +54,19 @@ namespace TrainRightApi.Repository
             }
         }
 
+        public IEnumerable<SinSubCategory> GetSinSubCategoriesbyId(string catid)
+        {
+            try
+            {
+                var subid = ReturnSubCatId(catid);
+                return _context.SinSubCategory.Where(q => q.SinCategoryId == subid);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public IEnumerable<SinSubCategory> GetAllSubCategories()
         {
             try
@@ -138,6 +151,38 @@ namespace TrainRightApi.Repository
             _context.SaveChanges();
             return GetInfoCommands(infoCommands.SubCatId);
         }
+
+        public bool UpdateSeeAlso(SeeAlso command)
+        {
+            var subcatid = ReturnSubCatId(command.SinCat);
+
+
+            var updateSinSubCross = _context.SinSubCatCrossRef.Where(i => i.SubCatId == subcatid);
+            _context.SinSubCatCrossRef.RemoveRange(updateSinSubCross);
+            _context.SaveChanges();
+
+            List<SinSubCatCrossRef> newSinSubCross = new List<SinSubCatCrossRef>();
+            foreach(var item in command.SelectedCategories)
+            {
+                SinSubCatCrossRef newSubCross = new SinSubCatCrossRef();
+                newSubCross.SubCatId = subcatid;
+                newSubCross.CrossSubCatId = ReturnSubCatId(item);
+
+                newSinSubCross.Add(newSubCross);
+            } 
+
+            if(newSinSubCross.Count > 0)
+            {
+                _context.SinSubCatCrossRef.AddRange(newSinSubCross);
+                _context.SaveChanges();
+                return true;
+            }
+
+            return false;
+
+        }
+
+
 
         public IEnumerable<InfoCommands> CreateInfoCommands(InfoCommands command)
         {

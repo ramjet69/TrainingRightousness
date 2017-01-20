@@ -125,6 +125,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\SeeAlsoController.cs" />
     <Compile Include="Areas\Admin\Controllers\InfoCommandsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SinCatController.cs" />
     <Compile Include="Areas\Admin\Controllers\SinSubCatController.cs" />

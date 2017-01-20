@@ -4,8 +4,11 @@ namespace TrainRightMVC.Areas.Admin.Models
 {
     public class SeeAlso
     {
-        public List<int> SelectedCategories { get; set; }
+        public List<string> SelectedCategories { get; set; }
 
         public List<SinSubCategories> AvailableCategories { get; set; }
+
+        public string SinCat { get; set; }
+
     }
 }

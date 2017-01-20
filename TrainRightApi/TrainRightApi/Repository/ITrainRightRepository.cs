@@ -14,6 +14,8 @@ namespace TrainRightApi.Repository
 
         IEnumerable<SinSubCategory> GetSinSubCategoriesbyId(int id);
 
+        IEnumerable<SinSubCategory> GetSinSubCategoriesbyId(string id);
+
         SinSectionHeader GetSinSectionHeader(int sinsubid);
 
         IEnumerable<SinSection> GetSinSectionTabs();
@@ -23,6 +25,8 @@ namespace TrainRightApi.Repository
         IEnumerable<InfoCommands> GetInfoCommands(string subcat);
 
         IEnumerable<InfoCommands> UpdateInfoCommands(InfoCommands command);
+
+        bool UpdateSeeAlso(SeeAlso command);
 
         IEnumerable<InfoCommands> CreateInfoCommands(InfoCommands command);
 

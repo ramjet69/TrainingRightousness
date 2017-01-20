@@ -30,6 +30,14 @@ namespace TrainRightApi.Controllers
         }
 
         [HttpGet]
+        [Route("")]
+        public IHttpActionResult Get([FromUri] string subcat)
+        {
+            return Ok(_repository.GetSinSubCategoriesbyId(subcat));
+        }
+
+
+        [HttpGet]
         [Route("SinDetails/{id}")]
         public IHttpActionResult GetSinDetails([FromUri] int id)
         {

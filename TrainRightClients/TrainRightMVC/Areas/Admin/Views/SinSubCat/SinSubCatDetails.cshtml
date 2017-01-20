@@ -52,7 +52,7 @@
                   foreach (var item in Model.TabNames)
                   {
                       tabstrip.Add().Text(item.SectionName)
-                      .LoadContentFrom(item.SectionRouteName + "/" + Model.PageTitle, "Admin/Tabs");
+                      .LoadContentFrom(item.SectionRouteName + "?subcat=" + Model.PageTitle, "Tabs");
                   }
                   
               })
