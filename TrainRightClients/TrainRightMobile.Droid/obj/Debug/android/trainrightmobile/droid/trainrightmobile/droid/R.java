@@ -15,15 +15,19 @@ public final class R {
         public static final int trainrightlogo=0x7f020001;
     }
     public static final class id {
+        public static final int SinCatNameTextView=0x7f050006;
         public static final int fragmentContainer=0x7f050000;
         public static final int giveInstructionButton=0x7f050002;
         public static final int logoImageView=0x7f050001;
         public static final int reviewTrainingButton=0x7f050003;
         public static final int settingsButton=0x7f050004;
+        public static final int sinCatListView=0x7f050005;
     }
     public static final class layout {
         public static final int giveinstructionmenuview=0x7f030000;
         public static final int mainmenu=0x7f030001;
+        public static final int sincategoryfragment=0x7f030002;
+        public static final int sincategoryrowview=0x7f030003;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

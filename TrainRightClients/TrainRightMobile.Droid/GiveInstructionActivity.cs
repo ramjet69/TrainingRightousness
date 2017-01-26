@@ -1,20 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
+using System.Collections.Generic;
+using TrainRightMobile.Core.Models;
+using TrainRightMobile.Droid.Fragments;
 
 namespace TrainRightMobile.Droid
 {
     [Activity(Label = "GiveInstructionActivity")]
     public class GiveInstructionActivity : Activity
     {
+        //private ListView sinCatListView;
+        //private List<SinCategory> allHotDogs;
+        //private HotDogDataService hotDogDataService;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,10 +23,7 @@ namespace TrainRightMobile.Droid
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-            AddTab("Favorites", Resource.Drawable.FavoritesIcon, new FavoriteHotDogFragment());
-            AddTab("Meat Lovers", Resource.Drawable.MeatLoversIcon, new MeatLoversFragment());
-            AddTab("Veggie Lovers", Resource.Drawable.veggieloversicon, new VeggieLoversFragment());
-
+            AddTab("Sin Categories", Resource.Drawable.smallicon, new SinCatFragment());
 
         }
 
@@ -56,15 +53,11 @@ namespace TrainRightMobile.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            //if (resultCode == Result.Ok && requestCode == 100)
-            //{
+            if (resultCode == Result.Ok && requestCode == 100)
+            {
             //    var selectedHotDog = hotDogDataService.GetHotDogById(data.GetIntExtra("selectedHotDogId", 0));
 
-            //    var dialog = new AlertDialog.Builder(this);
-            //    dialog.SetTitle("Confirmation");
-            //    dialog.SetMessage(string.Format("You've added {0} time(s) the {1}", data.GetIntExtra("amount", 0), selectedHotDog.Name));
-            //    dialog.Show();
-            //}
+            }
         }
 
     }

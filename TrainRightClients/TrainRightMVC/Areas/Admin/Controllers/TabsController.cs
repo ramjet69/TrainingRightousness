@@ -68,9 +68,10 @@ namespace TrainRightMVC.Areas.Admin.Controllers
         }
 
         [Route("InfoCommand/{subcat}")]
-        public ActionResult GeneralInformation()
+        public ActionResult GeneralInformation(string subcat)
         {
-            return (ActionResult)this.View("~/Areas/Admin/Views/Tabs/GeneralInfo.cshtml");
+
+            return View("~/Areas/Admin/Views/Tabs/GeneralInfo.cshtml");
         }
 
         [Route("WhatHappens/{subcat}")]

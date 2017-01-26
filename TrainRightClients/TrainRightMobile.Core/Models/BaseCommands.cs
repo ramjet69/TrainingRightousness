@@ -1,5 +1,5 @@
 ﻿
-namespace TrainRightMobile.Core.Repository.Models
+namespace TrainRightMobile.Core.Models
 {
     public class BaseCommands
     {

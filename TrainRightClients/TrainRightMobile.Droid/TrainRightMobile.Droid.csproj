@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\SinCatListAdapter.cs" />
+    <Compile Include="Fragments\BaseFragment.cs" />
+    <Compile Include="Fragments\SinCatFragment.cs" />
     <Compile Include="GiveInstructionActivity.cs" />
     <Compile Include="MainMenuActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -67,6 +70,12 @@
     <AndroidResource Include="Resources\layout\GiveInstructionMenuView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\SinCategoryFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SinCategoryRowView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -81,7 +90,10 @@
     <AndroidResource Include="Resources\drawable\smallicon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fragments\" />
+    <ProjectReference Include="..\TrainRightMobile.Core\TrainRightMobile.Core.csproj">
+      <Project>{6BA5AD3D-C3E4-48B1-ABC9-2A4B0C88F4E3}</Project>
+      <Name>TrainRightMobile.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

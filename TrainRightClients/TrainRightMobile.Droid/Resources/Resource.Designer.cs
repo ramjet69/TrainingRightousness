@@ -63,6 +63,9 @@ namespace TrainRightMobile.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050006
+			public const int SinCatNameTextView = 2131034118;
+			
 			// aapt resource value: 0x7f050000
 			public const int fragmentContainer = 2131034112;
 			
@@ -77,6 +80,9 @@ namespace TrainRightMobile.Droid
 			
 			// aapt resource value: 0x7f050004
 			public const int settingsButton = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int sinCatListView = 2131034117;
 			
 			static Id()
 			{
@@ -96,6 +102,12 @@ namespace TrainRightMobile.Droid
 			
 			// aapt resource value: 0x7f030001
 			public const int MainMenu = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int SinCategoryFragment = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int SinCategoryRowView = 2130903043;
 			
 			static Layout()
 			{

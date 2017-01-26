@@ -1,6 +1,5 @@
 ﻿
-
-namespace TrainRightMobile.Core.Repository
+namespace TrainRightMobile.Core.Models
 {
     public class SinSectionHeader
     {

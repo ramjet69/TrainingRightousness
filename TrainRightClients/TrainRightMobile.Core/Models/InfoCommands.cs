@@ -1,6 +1,5 @@
-﻿using TrainRightMobile.Core.Repository.Models;
-
-namespace TrainRightMobile.Core.Repository
+﻿
+namespace TrainRightMobile.Core.Models
 {
     public class InfoCommands : BaseCommands
     {

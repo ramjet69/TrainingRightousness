@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using TrainRightMobile.Core.Repository;
 
-namespace TrainRightApi.TrainRightMobile.Core.Repository
+namespace TrainRightMobile.Core.Models
 {
     public class SinCategory
     {

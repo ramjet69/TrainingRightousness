@@ -58,3 +58,7 @@ TrainRightApi/.vs/*
 TrainRightApi/packages/*
 TrainRightApi/TrainRightApi/bin/*
 TrainRightApi/TrainRightApi/obj/*
+TrainRightClients/TrainRightMobile.Core/bin/*
+TrainRightClients/TrainRightMobile.Droid/bin/*
+TrainRightClients/TrainRightMobile.iOS/bin/iPhone/*
+TrainRightClients/TrainRightMobile.iOS/obj/iPhone/*
