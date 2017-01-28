@@ -5,6 +5,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="TrainRightDroid" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="SinSubCatDetailsActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.SinSubCatDetailsActivity" />
     <activity android:label="GiveInstructionActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.GiveInstructionActivity" />
     <activity android:icon="@drawable/smallicon" android:label="Training in Righteousness" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.MainMenuActivity">
       <intent-filter>
@@ -14,6 +15,7 @@
     </activity>
     <activity android:label="ReviewTrainingActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.ReviewTrainingActivity" />
     <activity android:label="SettingsActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.SettingsActivity" />
+    <activity android:label="SinSubCatActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.SinSubCatActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="TrainRightMobile.Droid.TrainRightMobile.Droid.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

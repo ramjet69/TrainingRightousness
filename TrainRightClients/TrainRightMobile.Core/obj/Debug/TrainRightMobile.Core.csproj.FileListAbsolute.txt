@@ -2,8 +2,11 @@ C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRig
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\bin\Debug\TrainRightMobile.Core.pdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\bin\Debug\Newtonsoft.Json.dll
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.csprojResolveAssemblyReference.cache
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.dll
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.dll.mdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\bin\Debug\TrainRightMobile.Core.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\bin\Debug\TrainRightMobile.Core.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Core\obj\Debug\TrainRightMobile.Core.dll.mdb

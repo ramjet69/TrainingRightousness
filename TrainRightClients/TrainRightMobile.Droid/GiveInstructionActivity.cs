@@ -11,9 +11,6 @@ namespace TrainRightMobile.Droid
     [Activity(Label = "GiveInstructionActivity")]
     public class GiveInstructionActivity : Activity
     {
-        //private ListView sinCatListView;
-        //private List<SinCategory> allHotDogs;
-        //private HotDogDataService hotDogDataService;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

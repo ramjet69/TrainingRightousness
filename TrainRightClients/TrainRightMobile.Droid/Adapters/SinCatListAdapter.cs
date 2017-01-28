@@ -48,9 +48,7 @@ namespace TrainRightMobile.Droid.Adapters
         {
             var sincat = _sinCategories[position];
 
-            //custom row view demo
-            //var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://gillcleerenpluralsight.blob.core.windows.net/files/" + item.ImagePath + ".jpg");
-
+            
             if (convertView == null)
             {
                 convertView = _context.LayoutInflater.Inflate(Resource.Layout.SinCategoryRowView, null);

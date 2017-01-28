@@ -13,12 +13,18 @@ C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRig
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\mainmenu.xml
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\giveinstructionmenuview.xml
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sincategoryfragment.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sincategoryrowview.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sinsubcategoryrowview.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sinsubcategorylistview.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sinsubcatdetailsview.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\informationrowview.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\informationfragment.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\explanationfragment.xml
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\values\strings.xml
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\trainrightlogo.jpg
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\smallicon.jpg
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\R.cs.flag
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\uploadflags.txt
-C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\sincategoryrowview.xml
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Core.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\Java.Interop.dll.mdb
@@ -36,6 +42,7 @@ C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRig
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\System.Xml.Linq.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
@@ -48,5 +55,9 @@ C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRig
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\TrainRightMobile.Core.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\android\assets\TrainRightMobile.Droid.dll.mdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\layout\quotationfragment.xml
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\instruct.jpg
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\quote.png
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\res\drawable\comment.png
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\obj\Debug\TrainRightMobile.Droid.dll.mdb
 C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightClients\TrainRightMobile.Droid\bin\Debug\TrainRightMobile.Droid.dll.mdb
