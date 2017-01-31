@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:padding="8dp"
+  android:orientation="horizontal">
+      <TextView
+          android:text="What Happens / Should"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/hotDogNameTextView"
+          android:paddingTop="20dp"
+          android:textSize="20dp" />
+      <RelativeLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/bibleImageView"
+              android:layout_width="match_parent"
+              android:layout_height="100dp" />
+          <TextView
+              android:text="Bible Book"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/bibleBook"
+              android:paddingTop="20dp"
+              android:textSize="16dp" />
+      </RelativeLayout>
+  </LinearLayout>

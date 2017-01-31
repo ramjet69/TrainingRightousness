@@ -9,7 +9,7 @@ using TrainRightMobile.Droid.Adapters;
 
 namespace TrainRightMobile.Droid
 {
-    [Activity(Label = "SinSubCatActivity")]
+    [Activity(Label = "Sin SubCategory")]
     public class SinSubCatActivity : Activity
     {
         private List<SinSubCategory> _sinSubCategories;

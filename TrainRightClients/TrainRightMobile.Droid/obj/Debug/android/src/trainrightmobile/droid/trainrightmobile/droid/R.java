@@ -11,27 +11,37 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int comment=0x7f020000;
-        public static final int instruct=0x7f020001;
-        public static final int quote=0x7f020002;
-        public static final int smallicon=0x7f020003;
-        public static final int trainrightlogo=0x7f020004;
+        public static final int bible=0x7f020000;
+        public static final int categories=0x7f020001;
+        public static final int comment=0x7f020002;
+        public static final int crossref=0x7f020003;
+        public static final int instruct=0x7f020004;
+        public static final int quote=0x7f020005;
+        public static final int smallicon=0x7f020006;
+        public static final int trainrightlogo=0x7f020007;
     }
     public static final class id {
         public static final int InformationTextView=0x7f050003;
-        public static final int SinCatNameTextView=0x7f05000a;
-        public static final int SinSubCatNameTextView=0x7f05000d;
+        public static final int SeeAlsoTextView=0x7f05000a;
+        public static final int SinCatNameTextView=0x7f05000d;
+        public static final int SinSubCatNameTextView=0x7f050010;
+        public static final int bibleBook=0x7f050014;
+        public static final int bibleImageView=0x7f050013;
         public static final int explanationCommentsTextView=0x7f050000;
         public static final int explanationQuoteTextView=0x7f050008;
         public static final int fragmentContainer=0x7f050001;
         public static final int giveInstructionButton=0x7f050005;
+        public static final int hotDogNameTextView=0x7f050012;
         public static final int infoTabsListView=0x7f050002;
         public static final int logoImageView=0x7f050004;
         public static final int reviewTrainingButton=0x7f050006;
+        public static final int seeAlsoListView=0x7f050009;
+        public static final int seeAlsoTitleTextView=0x7f05000b;
         public static final int settingsButton=0x7f050007;
-        public static final int sinCatListView=0x7f050009;
-        public static final int sinSubCatListView=0x7f05000c;
-        public static final int sinSubCatTitleTextView=0x7f05000b;
+        public static final int sinCatListView=0x7f05000c;
+        public static final int sinSubCatListView=0x7f05000f;
+        public static final int sinSubCatTitleTextView=0x7f05000e;
+        public static final int whatHappensListView=0x7f050011;
     }
     public static final class layout {
         public static final int explanationfragment=0x7f030000;
@@ -40,11 +50,17 @@ public final class R {
         public static final int informationrowview=0x7f030003;
         public static final int mainmenu=0x7f030004;
         public static final int quotationfragment=0x7f030005;
-        public static final int sincategoryfragment=0x7f030006;
-        public static final int sincategoryrowview=0x7f030007;
-        public static final int sinsubcatdetailsview=0x7f030008;
-        public static final int sinsubcategorylistview=0x7f030009;
-        public static final int sinsubcategoryrowview=0x7f03000a;
+        public static final int seealsofragment=0x7f030006;
+        public static final int seealsorowview=0x7f030007;
+        public static final int seealsoview=0x7f030008;
+        public static final int sincategoryfragment=0x7f030009;
+        public static final int sincategoryrowview=0x7f03000a;
+        public static final int sinsubcatdetailsview=0x7f03000b;
+        public static final int sinsubcategorylistview=0x7f03000c;
+        public static final int sinsubcategoryrowview=0x7f03000d;
+        public static final int whathappensfragment=0x7f03000e;
+        public static final int whathappensrowview=0x7f03000f;
+        public static final int whathappensview=0x7f030010;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

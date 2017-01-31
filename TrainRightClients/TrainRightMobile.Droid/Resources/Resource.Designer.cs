@@ -45,19 +45,28 @@ namespace TrainRightMobile.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Comment = 2130837504;
+			public const int Bible = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int instruct = 2130837505;
+			public const int Categories = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Quote = 2130837506;
+			public const int Comment = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int smallicon = 2130837507;
+			public const int CrossRef = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int trainRightLogo = 2130837508;
+			public const int instruct = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int Quote = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int smallicon = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int trainRightLogo = 2130837511;
 			
 			static Drawable()
 			{
@@ -76,10 +85,19 @@ namespace TrainRightMobile.Droid
 			public const int InformationTextView = 2131034115;
 			
 			// aapt resource value: 0x7f05000a
-			public const int SinCatNameTextView = 2131034122;
+			public const int SeeAlsoTextView = 2131034122;
 			
 			// aapt resource value: 0x7f05000d
-			public const int SinSubCatNameTextView = 2131034125;
+			public const int SinCatNameTextView = 2131034125;
+			
+			// aapt resource value: 0x7f050010
+			public const int SinSubCatNameTextView = 2131034128;
+			
+			// aapt resource value: 0x7f050014
+			public const int bibleBook = 2131034132;
+			
+			// aapt resource value: 0x7f050013
+			public const int bibleImageView = 2131034131;
 			
 			// aapt resource value: 0x7f050000
 			public const int explanationCommentsTextView = 2131034112;
@@ -93,6 +111,9 @@ namespace TrainRightMobile.Droid
 			// aapt resource value: 0x7f050005
 			public const int giveInstructionButton = 2131034117;
 			
+			// aapt resource value: 0x7f050012
+			public const int hotDogNameTextView = 2131034130;
+			
 			// aapt resource value: 0x7f050002
 			public const int infoTabsListView = 2131034114;
 			
@@ -102,17 +123,26 @@ namespace TrainRightMobile.Droid
 			// aapt resource value: 0x7f050006
 			public const int reviewTrainingButton = 2131034118;
 			
+			// aapt resource value: 0x7f050009
+			public const int seeAlsoListView = 2131034121;
+			
+			// aapt resource value: 0x7f05000b
+			public const int seeAlsoTitleTextView = 2131034123;
+			
 			// aapt resource value: 0x7f050007
 			public const int settingsButton = 2131034119;
 			
-			// aapt resource value: 0x7f050009
-			public const int sinCatListView = 2131034121;
-			
 			// aapt resource value: 0x7f05000c
-			public const int sinSubCatListView = 2131034124;
+			public const int sinCatListView = 2131034124;
 			
-			// aapt resource value: 0x7f05000b
-			public const int sinSubCatTitleTextView = 2131034123;
+			// aapt resource value: 0x7f05000f
+			public const int sinSubCatListView = 2131034127;
+			
+			// aapt resource value: 0x7f05000e
+			public const int sinSubCatTitleTextView = 2131034126;
+			
+			// aapt resource value: 0x7f050011
+			public const int whatHappensListView = 2131034129;
 			
 			static Id()
 			{
@@ -146,19 +176,37 @@ namespace TrainRightMobile.Droid
 			public const int QuotationFragment = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int SinCategoryFragment = 2130903046;
+			public const int SeeAlsoFragment = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int SinCategoryRowView = 2130903047;
+			public const int SeeAlsoRowView = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int SinSubCatDetailsView = 2130903048;
+			public const int SeeAlsoView = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int SinSubCategoryListView = 2130903049;
+			public const int SinCategoryFragment = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int SinSubCategoryRowView = 2130903050;
+			public const int SinCategoryRowView = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int SinSubCatDetailsView = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int SinSubCategoryListView = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int SinSubCategoryRowView = 2130903053;
+			
+			// aapt resource value: 0x7f03000e
+			public const int WhatHappensFragment = 2130903054;
+			
+			// aapt resource value: 0x7f03000f
+			public const int WhatHappensRowView = 2130903055;
+			
+			// aapt resource value: 0x7f030010
+			public const int WhatHappensView = 2130903056;
 			
 			static Layout()
 			{

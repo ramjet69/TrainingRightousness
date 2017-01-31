@@ -22,6 +22,13 @@ namespace TrainRightApi.Controllers
         }
 
         [HttpGet]
+        [Route("SeeAlso/mobile/{subid}")]
+        public IHttpActionResult SeeAlso(int subid)
+        {
+            return Ok(_repository.GetSeeAlso(subid));
+        }
+
+        [HttpGet]
         [Route("InfoCommands/{subcat}")]
         public IHttpActionResult InfoCommands(string subcat)
         {
@@ -34,6 +41,15 @@ namespace TrainRightApi.Controllers
         {
             return Ok(_repository.GetWhatHappens(subcat));
         }
+
+        [HttpGet]
+        [Route("WhatHappens/mobile/{subid}")]
+        public IHttpActionResult WhatHappens(int subid)
+        {
+            return Ok(_repository.GetWhatHappens(subid));
+        }
+
+
 
         [HttpGet]
         [Route("Repentance/{subcat}")]

@@ -33,7 +33,7 @@ namespace TrainRightMobile.Droid
 
             AddTab("Quotation", Resource.Drawable.Quote, new QuotationFragment(sinSubCatId));
             AddTab("Explanation", Resource.Drawable.Comment, new ExplanationFragment(sinSubCatId));
-            AddTab("Information", Resource.Drawable.instruct, new InformationFragment());
+            AddTab("Information", Resource.Drawable.instruct, new InformationFragment(sinSubCatId));
 
         }
 

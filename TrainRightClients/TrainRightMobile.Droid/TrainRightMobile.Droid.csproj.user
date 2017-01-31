@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <AndroidDesignerPreferredTheme>Theme.Black</AndroidDesignerPreferredTheme>
-    <SelectedDevice>5.7" Lollipop %285.0%29 XXHDPI Phone</SelectedDevice>
+    <SelectedDevice>5.7" Marshmallow %286.0.0%29 XHDPI Phone</SelectedDevice>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>

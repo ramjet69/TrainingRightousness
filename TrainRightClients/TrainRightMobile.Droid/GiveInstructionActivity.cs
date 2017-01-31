@@ -8,7 +8,7 @@ using TrainRightMobile.Droid.Fragments;
 
 namespace TrainRightMobile.Droid
 {
-    [Activity(Label = "GiveInstructionActivity")]
+    [Activity(Label = "Give Instruction")]
     public class GiveInstructionActivity : Activity
     {
 
@@ -20,7 +20,7 @@ namespace TrainRightMobile.Droid
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-            AddTab("Sin Categories", Resource.Drawable.smallicon, new SinCatFragment());
+            AddTab("Sin Categories", Resource.Drawable.Categories, new SinCatFragment());
 
         }
 

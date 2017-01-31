@@ -41,6 +41,7 @@
     <Compile Include="Models\InfoCommands.cs" />
     <Compile Include="Models\Repentance.cs" />
     <Compile Include="Models\SinCategory.cs" />
+    <Compile Include="Models\SeeAlso.cs" />
     <Compile Include="Models\SinSection.cs" />
     <Compile Include="Models\SinSectionHeader.cs" />
     <Compile Include="Models\SinSubCatCrossRef.cs" />

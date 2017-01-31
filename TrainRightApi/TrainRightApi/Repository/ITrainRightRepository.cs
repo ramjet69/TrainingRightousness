@@ -22,6 +22,8 @@ namespace TrainRightApi.Repository
 
         IEnumerable<SinSubCatCrossRef> GetSeeAlso(string subcat);
 
+        SeeAlso GetSeeAlso(int subid);
+
         IEnumerable<InfoCommands> GetInfoCommands(string subcat);
 
         IEnumerable<InfoCommands> UpdateInfoCommands(InfoCommands command);
@@ -31,6 +33,8 @@ namespace TrainRightApi.Repository
         IEnumerable<InfoCommands> CreateInfoCommands(InfoCommands command);
 
         IEnumerable<WhatHappens> GetWhatHappens(string subcat);
+
+        IEnumerable<WhatHappens> GetWhatHappens(int subid);
 
         IEnumerable<Repentance> GetRepentance(string subcat);
 

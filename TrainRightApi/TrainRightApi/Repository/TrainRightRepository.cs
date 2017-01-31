@@ -116,6 +116,36 @@ namespace TrainRightApi.Repository
             }
         }
 
+        public SeeAlso GetSeeAlso(int subid)
+        {
+            SeeAlso seeAlso = new SeeAlso();
+            List<string> sinSubCategoriesList = new List<string>();
+
+            try
+            {
+                //get see alos cross ref from db
+                var sinSubCross = _context.SinSubCatCrossRef.Where(s => s.SubCatId == subid);
+
+                foreach (var item in sinSubCross)
+                {
+                    //db returns int...translate to string values
+                    var source = _context.SinSubCategory.Where(c => c.Id == item.CrossSubCatId);
+                    sinSubCategoriesList.Add(source.First().SubCategoryName);
+                }
+
+                seeAlso.SelectedCategories = sinSubCategoriesList;
+
+                return seeAlso;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+    }
+
+
+
         public IEnumerable<InfoCommands> GetInfoCommands(string subcat)
         {
             int subid = this.ReturnSubCatId(subcat);
@@ -132,6 +162,14 @@ namespace TrainRightApi.Repository
             int subid = ReturnSubCatId(subcat);
             return _context.WhatHappens.Where(i => i.SubCatId == subid);
         }
+
+        public IEnumerable<WhatHappens> GetWhatHappens(int subid)
+        {
+            return _context.WhatHappens.Where(i => i.SubCatId == subid);
+        }
+
+
+
 
         public IEnumerable<Repentance> GetRepentance(string subcat)
         {

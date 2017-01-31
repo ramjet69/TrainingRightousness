@@ -12,6 +12,13 @@ namespace TrainRightMobile.Droid.Fragments
     {
         protected ListView listView;
         protected List<SinSection> sinSections;
+        private int _sinSubCatId;
+
+
+        public InformationFragment(int id)
+        {
+            _sinSubCatId = id;
+        }
 
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -49,13 +56,22 @@ namespace TrainRightMobile.Droid.Fragments
 
         protected void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //var sinSubCat = sinCats[e.Position];
+            var intent = new Intent();
+            intent.PutExtra("selectedSinCatId", _sinSubCatId);
 
-            //var intent = new Intent();
-            //intent.SetClass(this.Activity, typeof(SinSubCatActivity));
-            //intent.PutExtra("selectedSinCatId", sinSubCat.Id);
+            switch (e.Position)
+            {
+                case 0:
+                    intent.SetClass(this.Activity, typeof(SeeAlsoActivity));
+                    break;
 
-            //StartActivityForResult(intent, 100);
+
+                default:
+                    break;
+            }
+
+            StartActivityForResult(intent, 100);
+
         }
 
 

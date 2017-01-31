@@ -127,6 +127,57 @@ namespace TrainRightMobile.Core.Repository
             return sinSectionHeader;
         }
 
+        public SeeAlso GetSeeAlso(int id)
+        {
+            SeeAlso seeAlso;
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    Task<HttpResponseMessage> getResponse = client.GetAsync(_url + "/api/TabSection/SeeAlso/mobile/" + id);
+                    HttpResponseMessage response = getResponse.Result;
+                    var responseJsonString = response.Content.ReadAsStringAsync();
+                    seeAlso = JsonConvert.DeserializeObject<SeeAlso>(responseJsonString.Result);
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+
+            return seeAlso;
+        }
+
+        public List<WhatHappens> GetWhatHappens(int id)
+        {
+            List<WhatHappens> whatHappens;
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    Task<HttpResponseMessage> getResponse = client.GetAsync(_url + "/api/TabSection/WhatHappens/mobile/" + id);
+                    HttpResponseMessage response = getResponse.Result;
+                    var responseJsonString = response.Content.ReadAsStringAsync();
+                    whatHappens = JsonConvert.DeserializeObject<List<WhatHappens>>(responseJsonString.Result);
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+            }
+
+            return whatHappens;
+        }
 
 
     }

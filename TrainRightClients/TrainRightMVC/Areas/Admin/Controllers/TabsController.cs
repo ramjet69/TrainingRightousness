@@ -77,11 +77,12 @@ namespace TrainRightMVC.Areas.Admin.Controllers
         [Route("WhatHappens/{subcat}")]
         public async Task<ActionResult> WhatHappens(string subcat)
         {
-            HttpResponseMessage async = await this.client.GetAsync(this.baseuri + this.url + "WhatHappens/" + subcat);
+            HttpResponseMessage async = await client.GetAsync(baseuri + url + "WhatHappens/" + subcat);
             List<WhatHappens> whatHappensList = new List<WhatHappens>();
             if (async.IsSuccessStatusCode)
-                whatHappensList = (List<WhatHappens>)JsonConvert.DeserializeObject<List<WhatHappens>>(async.Content.ReadAsStringAsync().Result);
-            return (ActionResult)this.View("~/Areas/Admin/Views/Tabs/WhatHappens.cshtml", (object)whatHappensList);
+                whatHappensList = JsonConvert.DeserializeObject<List<WhatHappens>>(async.Content.ReadAsStringAsync().Result);
+
+            return View("~/Areas/Admin/Views/Tabs/WhatHappens.cshtml", whatHappensList);
         }
 
         [Route("Repentance/{subcat}")]

@@ -33,6 +33,15 @@ namespace TrainRightMobile.Core.Service
             return trainRightRepository.GetSinSectionHeader(id);
         }
 
+        public SeeAlso GetSeeAlso(int id)
+        {
+            return trainRightRepository.GetSeeAlso(id);
+        }
+
+        public List<WhatHappens> GetWhatHappens(int id)
+        {
+            return trainRightRepository.GetWhatHappens(id);
+        }
 
     }
 }

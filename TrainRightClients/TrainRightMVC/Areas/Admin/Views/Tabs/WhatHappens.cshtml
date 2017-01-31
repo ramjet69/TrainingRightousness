@@ -1,5 +1,5 @@
 ﻿@using TrainRightMVC.Areas.Admin.Models;
-@model WhatHappens
+@model List<WhatHappens>
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -33,7 +33,7 @@
 <div class="demo-section k-content wide">
     <a class="k-button k-button-icontext k-add-button" href="#"><span class="k-icon k-add"></span>Add new record</a>
 
-    @(Html.Kendo().ListView<WhatHappens>()
+    @(Html.Kendo().ListView(Model)
     .Name("happens_listView")
     .TagName("div")
     .ClientTemplateId("happens_template")
