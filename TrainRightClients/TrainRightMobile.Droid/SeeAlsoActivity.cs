@@ -20,7 +20,7 @@ namespace TrainRightMobile.Droid
 
             SetContentView(Resource.Layout.SeeAlsoView);
             
-            var sinCatId = (int)Intent.Extras.GetInt("selectedSinCatId");
+            var sinCatId = (int)Intent.Extras.GetInt("selectedSinSubCatId");
             TrainRightApiService _trainRightDataService = new TrainRightApiService();
             _sinSectionHeader = _trainRightDataService.GetSinSectionHeader(sinCatId);
 

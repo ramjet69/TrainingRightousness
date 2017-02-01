@@ -10,6 +10,7 @@ using TrainRightMobile.Droid.Fragments;
 
 namespace TrainRightMobile.Droid
 {
+    [Activity(Label ="")]
     public class WhatHappensActivity : Activity
     {
         private List<WhatHappens> _whatHappens;

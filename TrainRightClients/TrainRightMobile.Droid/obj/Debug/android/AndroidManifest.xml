@@ -6,6 +6,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="TrainRightDroid" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:label="See Also Cross Reference" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.SeeAlsoActivity" />
+    <activity android:label="" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.WhatHappensActivity" />
     <activity android:label="SinSubCatDetailsActivity" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.SinSubCatDetailsActivity" />
     <activity android:label="Give Instruction" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.GiveInstructionActivity" />
     <activity android:icon="@drawable/smallicon" android:label="Training in Righteousness" android:name="md53cadfb40be55572ffcefaf6b4020b8ef.MainMenuActivity">

@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>1/31/2017 11:19:38</xs:documentation>
+    <xs:documentation>1/31/2017 16:34:10</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -17075,24 +17075,33 @@
             <xs:enumeration value="@+id/checkBox1" />
             <xs:enumeration value="@id/bibleBook" />
             <xs:enumeration value="@id/bibleImageView" />
+            <xs:enumeration value="@id/bibleVerse" />
+            <xs:enumeration value="@id/discipleshipText" />
             <xs:enumeration value="@id/explanationCommentsTextView" />
             <xs:enumeration value="@id/explanationQuoteTextView" />
             <xs:enumeration value="@id/fragmentContainer" />
             <xs:enumeration value="@id/giveInstructionButton" />
-            <xs:enumeration value="@id/hotDogNameTextView" />
             <xs:enumeration value="@id/InformationTextView" />
             <xs:enumeration value="@id/infoTabsListView" />
+            <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/logoImageView" />
             <xs:enumeration value="@id/reviewTrainingButton" />
             <xs:enumeration value="@id/seeAlsoListView" />
             <xs:enumeration value="@id/SeeAlsoTextView" />
             <xs:enumeration value="@id/seeAlsoTitleTextView" />
             <xs:enumeration value="@id/settingsButton" />
+            <xs:enumeration value="@id/shouldHappenText" />
             <xs:enumeration value="@id/sinCatListView" />
             <xs:enumeration value="@id/SinCatNameTextView" />
             <xs:enumeration value="@id/sinSubCatListView" />
             <xs:enumeration value="@id/SinSubCatNameTextView" />
             <xs:enumeration value="@id/sinSubCatTitleTextView" />
+            <xs:enumeration value="@id/textView1" />
+            <xs:enumeration value="@id/textView3" />
+            <xs:enumeration value="@id/textView5" />
+            <xs:enumeration value="@id/verseText" />
+            <xs:enumeration value="@id/whatHappensListView" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />

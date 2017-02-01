@@ -25,22 +25,30 @@ public final class R {
         public static final int SeeAlsoTextView=0x7f05000a;
         public static final int SinCatNameTextView=0x7f05000d;
         public static final int SinSubCatNameTextView=0x7f050010;
-        public static final int bibleBook=0x7f050014;
-        public static final int bibleImageView=0x7f050013;
+        public static final int bibleBook=0x7f050015;
+        public static final int bibleImageView=0x7f050014;
+        public static final int bibleVerse=0x7f050016;
+        public static final int discipleshipText=0x7f05001c;
         public static final int explanationCommentsTextView=0x7f050000;
         public static final int explanationQuoteTextView=0x7f050008;
         public static final int fragmentContainer=0x7f050001;
         public static final int giveInstructionButton=0x7f050005;
-        public static final int hotDogNameTextView=0x7f050012;
         public static final int infoTabsListView=0x7f050002;
+        public static final int linearLayout1=0x7f050012;
+        public static final int linearLayout2=0x7f050013;
         public static final int logoImageView=0x7f050004;
         public static final int reviewTrainingButton=0x7f050006;
         public static final int seeAlsoListView=0x7f050009;
         public static final int seeAlsoTitleTextView=0x7f05000b;
         public static final int settingsButton=0x7f050007;
+        public static final int shouldHappenText=0x7f05001a;
         public static final int sinCatListView=0x7f05000c;
         public static final int sinSubCatListView=0x7f05000f;
         public static final int sinSubCatTitleTextView=0x7f05000e;
+        public static final int textView1=0x7f050017;
+        public static final int textView3=0x7f050019;
+        public static final int textView5=0x7f05001b;
+        public static final int verseText=0x7f050018;
         public static final int whatHappensListView=0x7f050011;
     }
     public static final class layout {

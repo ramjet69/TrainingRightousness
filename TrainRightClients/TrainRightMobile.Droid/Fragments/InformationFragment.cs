@@ -57,14 +57,17 @@ namespace TrainRightMobile.Droid.Fragments
         protected void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var intent = new Intent();
-            intent.PutExtra("selectedSinCatId", _sinSubCatId);
+            intent.PutExtra("selectedSinSubCatId", _sinSubCatId);
 
             switch (e.Position)
             {
                 case 0:
-                    intent.SetClass(this.Activity, typeof(SeeAlsoActivity));
+                    intent.SetClass(Activity, typeof(SeeAlsoActivity));
                     break;
 
+                case 2:
+                    intent.SetClass(Activity, typeof(WhatHappensActivity));
+                    break;
 
                 default:
                     break;

@@ -93,11 +93,17 @@ namespace TrainRightMobile.Droid
 			// aapt resource value: 0x7f050010
 			public const int SinSubCatNameTextView = 2131034128;
 			
-			// aapt resource value: 0x7f050014
-			public const int bibleBook = 2131034132;
+			// aapt resource value: 0x7f050015
+			public const int bibleBook = 2131034133;
 			
-			// aapt resource value: 0x7f050013
-			public const int bibleImageView = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int bibleImageView = 2131034132;
+			
+			// aapt resource value: 0x7f050016
+			public const int bibleVerse = 2131034134;
+			
+			// aapt resource value: 0x7f05001c
+			public const int discipleshipText = 2131034140;
 			
 			// aapt resource value: 0x7f050000
 			public const int explanationCommentsTextView = 2131034112;
@@ -111,11 +117,14 @@ namespace TrainRightMobile.Droid
 			// aapt resource value: 0x7f050005
 			public const int giveInstructionButton = 2131034117;
 			
-			// aapt resource value: 0x7f050012
-			public const int hotDogNameTextView = 2131034130;
-			
 			// aapt resource value: 0x7f050002
 			public const int infoTabsListView = 2131034114;
+			
+			// aapt resource value: 0x7f050012
+			public const int linearLayout1 = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int linearLayout2 = 2131034131;
 			
 			// aapt resource value: 0x7f050004
 			public const int logoImageView = 2131034116;
@@ -132,6 +141,9 @@ namespace TrainRightMobile.Droid
 			// aapt resource value: 0x7f050007
 			public const int settingsButton = 2131034119;
 			
+			// aapt resource value: 0x7f05001a
+			public const int shouldHappenText = 2131034138;
+			
 			// aapt resource value: 0x7f05000c
 			public const int sinCatListView = 2131034124;
 			
@@ -140,6 +152,18 @@ namespace TrainRightMobile.Droid
 			
 			// aapt resource value: 0x7f05000e
 			public const int sinSubCatTitleTextView = 2131034126;
+			
+			// aapt resource value: 0x7f050017
+			public const int textView1 = 2131034135;
+			
+			// aapt resource value: 0x7f050019
+			public const int textView3 = 2131034137;
+			
+			// aapt resource value: 0x7f05001b
+			public const int textView5 = 2131034139;
+			
+			// aapt resource value: 0x7f050018
+			public const int verseText = 2131034136;
 			
 			// aapt resource value: 0x7f050011
 			public const int whatHappensListView = 2131034129;

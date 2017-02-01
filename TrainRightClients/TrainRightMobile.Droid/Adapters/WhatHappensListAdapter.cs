@@ -60,7 +60,10 @@ namespace TrainRightMobile.Droid.Adapters
 
             _bibleImageView.SetImageResource(Resource.Drawable.Bible);
             convertView.FindViewById<TextView>(Resource.Id.bibleBook).Text = whatHappen.BibleBook;
-            
+            convertView.FindViewById<TextView>(Resource.Id.bibleVerse).Text = whatHappen.VerseNumber;
+            convertView.FindViewById<TextView>(Resource.Id.verseText).Text = whatHappen.Verse;
+            convertView.FindViewById<TextView>(Resource.Id.shouldHappenText).Text = whatHappen.WhatHappensShould;
+            convertView.FindViewById<TextView>(Resource.Id.discipleshipText).Text = whatHappen.Discipleship;
 
             return convertView;
         }
@@ -74,5 +77,5 @@ namespace TrainRightMobile.Droid.Adapters
 
 
 
-        }
+    }
 }
