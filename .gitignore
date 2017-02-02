@@ -62,3 +62,10 @@ TrainRightClients/TrainRightMobile.Core/bin/*
 TrainRightClients/TrainRightMobile.Droid/bin/*
 TrainRightClients/TrainRightMobile.iOS/bin/iPhone/*
 TrainRightClients/TrainRightMobile.iOS/obj/iPhone/*
+TrainRightNop/Libraries/*
+TrainRightNop/packages/*
+TrainRightNop/Tests/*
+TrainRightNop/Presentation/*
+TrainRightNop/Plugins/Nop.Plugin.*
+NopImages/*
+TrainRightClients/TrainRightMobile.Droid/obj/Debug/*
