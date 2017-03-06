@@ -1,0 +1,8 @@
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Presentation\Nop.Web\Plugins\GPGVM.Nop.Access.IdentityServer\Description.txt
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Presentation\Nop.Web\Plugins\GPGVM.Nop.Access.IdentityServer\web.config
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Presentation\Nop.Web\Plugins\GPGVM.Nop.Access.IdentityServer\GPGVM.Nop.Access.IdentityServer.dll
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Presentation\Nop.Web\Plugins\GPGVM.Nop.Access.IdentityServer\GPGVM.Nop.Access.IdentityServer.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Plugins\GPGVM.Nop.Access.IdentityServer\obj\Debug\GPGVM.Nop.Access.IdentityServer.csprojResolveAssemblyReference.cache
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Plugins\GPGVM.Nop.Access.IdentityServer\obj\Debug\GPGVM.Nop.Access.IdentityServer.dll
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Plugins\GPGVM.Nop.Access.IdentityServer\obj\Debug\GPGVM.Nop.Access.IdentityServer.pdb
+C:\Users\GPGVM\Documents\GitHub\TrainingRighteousness\TrainRightNop\Presentation\Nop.Web\Plugins\GPGVM.Nop.Access.IdentityServer\logo.jpg
