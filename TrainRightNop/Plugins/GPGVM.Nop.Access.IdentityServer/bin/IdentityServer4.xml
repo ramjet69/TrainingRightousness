@@ -6563,38 +6563,6 @@
               <c>true</c> is the URI is valid; <c>false</c> otherwise.
             </returns>
         </member>
-        <member name="T:IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth">
-            <summary>
-            Implementation of strict redirect URI validator that allows a random port if 127.0.0.1 is used.
-            </summary>
-            <seealso cref="T:IdentityServer4.Validation.StrictRedirectUriValidator" />
-        </member>
-        <member name="M:IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth.#ctor(Microsoft.Extensions.Logging.ILogger{IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth})">
-            <summary>
-            Initializes a new instance of the <see cref="T:IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth"/> class.
-            </summary>
-            <param name="logger">The logger.</param>
-        </member>
-        <member name="M:IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth.IsRedirectUriValidAsync(System.String,IdentityServer4.Models.Client)">
-            <summary>
-            Determines whether a redirect URI is valid for a client.
-            </summary>
-            <param name="requestedUri">The requested URI.</param>
-            <param name="client">The client.</param>
-            <returns>
-            <c>true</c> is the URI is valid; <c>false</c> otherwise.
-            </returns>
-        </member>
-        <member name="M:IdentityServer4.Validation.StrictRedirectUriValidatorAppAuth.IsPostLogoutRedirectUriValidAsync(System.String,IdentityServer4.Models.Client)">
-            <summary>
-            Determines whether a post logout URI is valid for a client.
-            </summary>
-            <param name="requestedUri">The requested URI.</param>
-            <param name="client">The client.</param>
-            <returns>
-            <c>true</c> is the URI is valid; <c>false</c> otherwise.
-            </returns>
-        </member>
         <member name="T:IdentityServer4.Validation.TokenRequestValidator">
             <summary>
             The token request validator

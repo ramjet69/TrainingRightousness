@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Routing;
-using GPGVM.Nop.Access.IdentityServer.Plugin.Data;
+using GPGVM.Nop.Access.IdentityServer.Data;
 using Nop.Core.Plugins;
 using Nop.Services.Authentication.External;
 using Nop.Services.Configuration;
@@ -53,52 +53,26 @@ namespace GPGVM.Nop.Access.IdentityServer
             _context.Install();
             
 
+
+            //settings
+            var settings = new GPGVMembershipAuthSettings
+            {
+                //ClientKeyIdentifier = "",
+                //ClientSecret = "",
+            };
+            _settingService.SaveSetting(settings);
+
             #region Client Settings
 
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Enabled", "Enabled");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Enabled.Hint", "If this type of client is enabled.");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientName", "Client Name");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientName.Hint", "Client display name (used for logging and consent screen)");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientId", "Client ID");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientId.Hint", "Unique ID of the client");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RequireConsent", "Require Consent");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RequireConsent.Hint", "Specifies whether a consent screen is required.");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AllowedGrantTypes", "Grant Types");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AllowedGrantTypes.Hint", "Specifies the grant types the client is allowed to use.");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUris", "Redirect URI's");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUris.Hint", "List of the redirection URI's");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.EditClientDetails", "Edit client details");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Manage", "Manage Clients");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.SearchCategoryName", "Client Name");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AddNew", "Add new client");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.BackToList", "back to client list");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Enabled", "If this type of client is enabled.");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientName", "Client display name (used for logging and consent screen)");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientId", "Unique ID of the client");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RequireConsent", "Specifies whether a consent screen is required.");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AllowedGrantTypes", "Specifies the grant types the client is allowed to use.");
+                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUris", "Specifies the allowed URIs to return tokens or authorization codes to");
 
             #endregion
 
-            #region Model Settings
-
-            this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUriName", "Name");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUriName.Hint", "Friendly name for the uri redirection.");
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUri", "URI");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUri.Hint", "Specifies the allowed URIs to return tokens or authorization codes to.");
-
-               
-            #endregion
-
-            #region General
-
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.TabName", "Clients");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Scopes.TabName", "Scopes");
-                this.AddOrUpdatePluginLocaleResource("GPGVM.NOP.IdentityServer.Users.TabName", "Users");
-
-            #endregion
 
             base.Install();
         }
@@ -108,50 +82,18 @@ namespace GPGVM.Nop.Access.IdentityServer
             _context.Uninstall();
 
 
+            //settings
+            _settingService.DeleteSetting<GPGVMembershipAuthSettings>();
+
             #region Client Settings
 
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Enabled");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Enabled.Hint");
-
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientName");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientName.Hint");
-
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientId");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.ClientId.Hint");
-
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RequireConsent");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RequireConsent.Hint");
-
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AllowedGrantTypes");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AllowedGrantTypes.Hint");
-
                 this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUris");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUris.Hint");
-
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.EditClientDetails");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.EditClientDetails.Hint");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.Manage");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.SearchCategoryName");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.AddNew");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.BackToList");
-
-            #endregion
-
-            #region Models
-
-            this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUriName");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUriName.Hint");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUri");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.RedirectUri.Hint");
-
-            #endregion
-
-            #region General
-
-            this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Clients.TabName");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Scopes.TabName");
-                this.DeletePluginLocaleResource("GPGVM.NOP.IdentityServer.Users.TabName");
-
+            
             #endregion
 
             base.Uninstall();

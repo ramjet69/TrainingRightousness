@@ -67,7 +67,5 @@ TrainRightNop/packages/*
 TrainRightNop/Tests/*
 TrainRightNop/Presentation/*
 TrainRightNop/Plugins/Nop.Plugin.*
-TrainRightNop/Plugins/GPGVM.Nop.Access.IdentityServer/bin/*
-TrainRightNop/Plugins/GPGVM.Nop.Access.IdentityServer/obj/*
 NopImages/*
 TrainRightClients/TrainRightMobile.Droid/obj/Debug/*
