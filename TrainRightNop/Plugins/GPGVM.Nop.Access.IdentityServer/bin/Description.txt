@@ -1,9 +1,0 @@
-﻿Group: Payment Verification
-FriendlyName: Verify Membership is Active
-SystemName: GPGVMVerification.MembershipActive
-Version: 7.89
-SupportedVersions: 3.80
-Author: GPGVM Development Team
-DisplayOrder: 1
-FileName: GPGVM.Nop.Access.IdentityServer.dll
-Description: This plugin verifies current membership and allows access to membership restricted resources.
